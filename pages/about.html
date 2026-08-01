@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the story behind Savoir - A Michelin-starred fine dining restaurant with 15 years of culinary excellence.">
+    <meta name="keywords" content="about savoir, restaurant story, fine dining history, michelin star">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>About Us | Savoir Restaurant</title>
+    
+    <link rel="icon" type="image/png" href="../Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/utilities.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                 <img src="../Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../Images/backgrounds/about-header.png');">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="page-subtitle reveal-up">Our Story</span>
+                    <h1 class="page-title reveal-up delay-1">About Savoir</h1>
+                    <div class="page-breadcrumb reveal-up delay-2">
+                        <a href="../index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>About</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Story Section -->
+    <section class="section story-section" id="story">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="story-images reveal-left">
+                        <div class="story-image-main">
+                            <img src="../Images/gallery/gallery 2.png" alt="Restaurant Interior" loading="lazy">
+                        </div>
+                        <div class="story-image-floating">
+                            <img src="../Images/chefs/chef 1.png" alt="Chef at Work" loading="lazy">
+                        </div>
+                        <div class="story-experience-badge">
+                            <span class="experience-years">15+</span>
+                            <span class="experience-text">Years of<br>Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="story-content reveal-right">
+                        <span class="section-subtitle">Since 2009</span>
+                        <h2 class="section-title">A Legacy of Culinary Excellence</h2>
+                        <div class="section-divider divider-left"></div>
+                        <p class="story-text">
+                            Savoir was born from a simple yet profound belief: that dining should be an extraordinary 
+                            experience that engages all the senses. Founded in 2009 by renowned chef Marco Rossi, 
+                            our restaurant has grown from a humble bistro to one of the most celebrated fine dining 
+                            destinations in the world.
+                        </p>
+                        <p class="story-text">
+                            Our journey has been defined by an unwavering commitment to excellence. Every ingredient 
+                            is sourced with care, every dish is crafted with precision, and every guest is treated 
+                            with the utmost respect. This dedication has earned us numerous accolades, including 
+                            two Michelin stars and recognition from the World's 50 Best Restaurants.
+                        </p>
+                        <div class="story-signature">
+                                <h4>Marco Rossi</h4>
+                                <span>Founder & Executive Chef</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission & Vision Section -->
+    <section class="section mission-section" id="mission">
+        <div class="mission-bg" style="background-image: url('../Images/backgrounds/mission-bg.png');"></div>
+        <div class="mission-overlay"></div>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="mission-card reveal-up">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 class="mission-title">Our Mission</h3>
+                        <p class="mission-text">
+                            To create unforgettable dining experiences that celebrate the art of gastronomy. 
+                            We strive to push the boundaries of culinary innovation while honoring traditional 
+                            techniques and the finest ingredients nature has to offer.
+                        </p>
+                        <ul class="mission-list">
+                            <li><i class="fas fa-check"></i> Excellence in every detail</li>
+                            <li><i class="fas fa-check"></i> Sustainable sourcing practices</li>
+                            <li><i class="fas fa-check"></i> Innovation with respect for tradition</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mission-card reveal-up delay-1">
+                        <div class="mission-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="mission-title">Our Vision</h3>
+                        <p class="mission-text">
+                            To be recognized globally as the pinnacle of fine dining, where every visit becomes 
+                            a cherished memory. We envision a world where culinary artistry brings people together 
+                            and creates moments of pure joy.
+                        </p>
+                        <ul class="mission-list">
+                            <li><i class="fas fa-check"></i> Global culinary leadership</li>
+                            <li><i class="fas fa-check"></i> Nurturing the next generation of chefs</li>
+                            <li><i class="fas fa-check"></i> Setting new standards in hospitality</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values Section -->
+    <section class="section values-section" id="values">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">What We Stand For</span>
+                    <h2 class="section-title reveal-up delay-1">Our Core Values</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-card reveal-up">
+                        <div class="value-number">01</div>
+                        <h4 class="value-title">Passion</h4>
+                        <p class="value-desc">We pour our heart and soul into every dish, driven by an unwavering love for the culinary arts.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-card reveal-up delay-1">
+                        <div class="value-number">02</div>
+                        <h4 class="value-title">Integrity</h4>
+                        <p class="value-desc">Honesty and transparency guide every decision, from sourcing to service.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-card reveal-up delay-2">
+                        <div class="value-number">03</div>
+                        <h4 class="value-title">Innovation</h4>
+                        <p class="value-desc">We constantly explore new techniques and flavors while respecting culinary heritage.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-card reveal-up delay-3">
+                        <div class="value-number">04</div>
+                        <h4 class="value-title">Excellence</h4>
+                        <p class="value-desc">Good enough is never enough. We strive for perfection in every aspect of our craft.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Awards Section -->
+    <section class="section awards-section" id="awards">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">Recognition</span>
+                    <h2 class="section-title reveal-up delay-1">Awards & Accolades</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="award-card reveal-up">
+                        <div class="award-year">2023</div>
+                        <div class="award-icon"><i class="fas fa-star"></i></div>
+                        <h4 class="award-title">Two Michelin Stars</h4>
+                        <p class="award-desc">Recognized for exceptional cuisine, worth a detour.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="award-card reveal-up delay-1">
+                        <div class="award-year">2022</div>
+                        <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                        <h4 class="award-title">World's 50 Best</h4>
+                        <p class="award-desc">Ranked #24 among the world's finest restaurants.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="award-card reveal-up delay-2">
+                        <div class="award-year">2021</div>
+                        <div class="award-icon"><i class="fas fa-award"></i></div>
+                        <h4 class="award-title">James Beard Award</h4>
+                        <p class="award-desc">Outstanding Restaurant in North America.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="award-card reveal-up">
+                        <div class="award-year">2020</div>
+                        <div class="award-icon"><i class="fas fa-wine-glass"></i></div>
+                        <h4 class="award-title">Wine Spectator</h4>
+                        <p class="award-desc">Grand Award for our exceptional wine program.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="award-card reveal-up delay-1">
+                        <div class="award-year">2019</div>
+                        <div class="award-icon"><i class="fas fa-leaf"></i></div>
+                        <h4 class="award-title">Green Star</h4>
+                        <p class="award-desc">Sustainable gastronomy leadership award.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="award-card reveal-up delay-2">
+                        <div class="award-year">2018</div>
+                        <div class="award-icon"><i class="fas fa-utensils"></i></div>
+                        <h4 class="award-title">AAA Five Diamond</h4>
+                        <p class="award-desc">The highest level of excellence in hospitality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="section cta-section" id="cta">
+        <div class="cta-bg" style="background-image: url('../Images/backgrounds/cta-bg.png');"></div>
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="cta-content reveal-up">
+                        <h2 class="cta-title">Experience the Extraordinary</h2>
+                        <p class="cta-desc">Join us for an unforgettable dining experience. Reserve your table today.</p>
+                        <div class="cta-buttons">
+                            <a href="reservation.html" class="btn btn-primary-glow btn-lg">
+                                <span>Reserve a Table</span>
+                                <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                            <a href="menu.html" class="btn btn-outline-light btn-lg">
+                                <span>View Our Menu</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="../index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="menu.html">Our Menu</a></li>
+                                <li><a href="chefs.html">Our Chefs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="reservation.html">Reservations</a></li>
+                                <li><a href="#">Private Dining</a></li>
+                                <li><a href="#">Catering</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i><span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span></li>
+                                <li><i class="fas fa-phone"></i><span>+1 (212) 555-7890</span></li>
+                                <li><i class="fas fa-envelope"></i><span>reservations@savoir.com</span></li>
+                                <li><i class="fas fa-clock"></i><span>Mon - Sun: 5:00 PM - 11:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">&copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Savoir - A Michelin-star dining experience. Premium luxury restaurant serving exquisite culinary masterpieces.">
+    <meta name="keywords" content="luxury restaurant, fine dining, michelin star, gourmet food, reservation">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>Savoir | Fine Dining Experience</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/variables.css">
+    <link rel="stylesheet" href="CSS/utilities.css">
+    <link rel="stylesheet" href="CSS/animations.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- ========================================== -->
+    <!-- LOADING SCREEN                             -->
+    <!-- ========================================== -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- ========================================== -->
+    <!-- SCROLL PROGRESS BAR                        -->
+    <!-- ========================================== -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- ========================================== -->
+    <!-- NAVIGATION                                 -->
+    <!-- ========================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/chefs.html">Chefs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/reservation.html">Reservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contact.html">Contact</a>
+                    </li>
+                    
+                    <!-- Theme Toggle -->
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    
+                    <!-- CTA Button -->
+                    <li class="nav-item ms-lg-3">
+                        <a href="pages/reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section class="hero-section" id="hero">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active" style="background-image: url('Images/hero/hero\ 1.png');">
+                <div class="hero-overlay"></div>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="hero-content">
+                                <span class="hero-subtitle reveal-up">Welcome to Savoir</span>
+                                <h1 class="hero-title reveal-up delay-1">
+                                    Taste the <span class="text-gradient">Extraordinary</span>
+                                </h1>
+                                <p class="hero-description reveal-up delay-2">
+                                    Experience culinary artistry at its finest. Our Michelin-starred chefs craft 
+                                    unforgettable dishes that tantalize every sense.
+                                </p>
+                                <div class="hero-buttons reveal-up delay-3">
+                                    <a href="pages/reservation.html" class="btn btn-primary-glow">
+                                        <span>Reserve a Table</span>
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                    <a href="pages/menu.html" class="btn btn-outline-light">
+                                        <span>Explore Menu</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="hero-slide" style="background-image: url('Images/hero/hero\ 2.png');">
+                <div class="hero-overlay"></div>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="hero-content">
+                                <span class="hero-subtitle">Fine Dining Redefined</span>
+                                <h1 class="hero-title">
+                                    Where <span class="text-gradient">Passion</span> Meets Plate
+                                </h1>
+                                <p class="hero-description">
+                                    Every dish tells a story. Discover our seasonal tasting menu curated 
+                                    with the world's finest ingredients.
+                                </p>
+                                <div class="hero-buttons">
+                                    <a href="pages/reservation.html" class="btn btn-primary-glow">
+                                        <span>Book Now</span>
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                    <a href="pages/menu.html" class="btn btn-outline-light">
+                                        <span>View Menu</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="hero-slide" style="background-image: url('Images/hero/hero\ 3.png');">
+                <div class="hero-overlay"></div>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="hero-content">
+                                <span class="hero-subtitle">An Evening to Remember</span>
+                                <h1 class="hero-title">
+                                    Savor Every <span class="text-gradient">Moment</span>
+                                </h1>
+                                <p class="hero-description">
+                                    Immerse yourself in an ambiance of elegance. Perfect for romantic 
+                                    evenings, celebrations, and business dinners.
+                                </p>
+                                <div class="hero-buttons">
+                                    <a href="pages/reservation.html" class="btn btn-primary-glow">
+                                        <span>Reserve Now</span>
+                                        <i class="fas fa-arrow-right ms-2"></i>
+                                    </a>
+                                    <a href="pages/about.html" class="btn btn-outline-light">
+                                        <span>Our Story</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="hero-slider-controls">
+            <button class="slider-arrow slider-prev" id="sliderPrev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots">
+                <button class="slider-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                <button class="slider-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                <button class="slider-dot" data-slide="2" aria-label="Go to slide 3"></button>
+            </div>
+            <button class="slider-arrow slider-next" id="sliderNext" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll to explore</span>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- FEATURED DISHES SECTION                    -->
+    <!-- ========================================== -->
+    <section class="section featured-section" id="featured">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">Chef's Selection</span>
+                    <h2 class="section-title reveal-up delay-1">Featured Dishes</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                    <p class="section-description reveal-up delay-2">
+                        Handpicked by our executive chef, these signature creations represent the pinnacle 
+                        of our culinary philosophy.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Featured Item 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="featured-card reveal-up">
+                        <div class="featured-image">
+                            <img src="Images/menu/food 1.png" alt="Wagyu Beef Tenderloin" loading="lazy">
+                            <div class="featured-badge">Signature</div>
+                            <div class="featured-overlay">
+                                <a href="pages/menu.html" class="btn-view">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-meta">
+                                <span class="featured-category">Main Course</span>
+                                <div class="featured-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h3 class="featured-title">Wagyu Beef Tenderloin</h3>
+                            <p class="featured-desc">A5 Japanese Wagyu, truffle jus, roasted bone marrow, seasonal vegetables</p>
+                            <div class="featured-footer">
+                                <span class="featured-price">$145</span>
+                                <a href="pages/reservation.html" class="featured-order">Order Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Item 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="featured-card reveal-up delay-1">
+                        <div class="featured-image">
+                            <img src="Images/menu/food 2.png" alt="Lobster Thermidor" loading="lazy">
+                            <div class="featured-badge hot">Popular</div>
+                            <div class="featured-overlay">
+                                <a href="pages/menu.html" class="btn-view">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-meta">
+                                <span class="featured-category">Seafood</span>
+                                <div class="featured-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h3 class="featured-title">Lobster Thermidor</h3>
+                            <p class="featured-desc">Maine lobster, cognac cream sauce, gruyère crust, herb butter</p>
+                            <div class="featured-footer">
+                                <span class="featured-price">$98</span>
+                                <a href="pages/reservation.html" class="featured-order">Order Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Item 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="featured-card reveal-up delay-2">
+                        <div class="featured-image">
+                            <img src="Images/menu/food 3.png" alt="Duck Confit" loading="lazy">
+                            <div class="featured-badge new">New</div>
+                            <div class="featured-overlay">
+                                <a href="pages/menu.html" class="btn-view">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-meta">
+                                <span class="featured-category">Main Course</span>
+                                <div class="featured-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <h3 class="featured-title">Duck Confit</h3>
+                            <p class="featured-desc">Slow-cooked duck leg, cherry gastrique, parsnip purée, crispy skin</p>
+                            <div class="featured-footer">
+                                <span class="featured-price">$72</span>
+                                <a href="pages/reservation.html" class="featured-order">Order Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- CATEGORIES SECTION                         -->
+    <!-- ========================================== -->
+    <section class="section categories-section" id="categories">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">Our Menu</span>
+                    <h2 class="section-title reveal-up delay-1">Explore Categories</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="pages/menu.html" class="category-card reveal-up">
+                        <div class="category-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4 class="category-name">Appetizers</h4>
+                        <span class="category-count">12 Items</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="pages/menu.html" class="category-card reveal-up delay-1">
+                        <div class="category-icon">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                        <h4 class="category-name">Main Course</h4>
+                        <span class="category-count">18 Items</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="pages/menu.html" class="category-card reveal-up delay-2">
+                        <div class="category-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <h4 class="category-name">Seafood</h4>
+                        <span class="category-count">10 Items</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="pages/menu.html" class="category-card reveal-up delay-3">
+                        <div class="category-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4 class="category-name">Vegetarian</h4>
+                        <span class="category-count">8 Items</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="pages/menu.html" class="category-card reveal-up delay-4">
+                        <div class="category-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h4 class="category-name">Desserts</h4>
+                        <span class="category-count">14 Items</span>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <a href="pages/menu.html" class="category-card reveal-up delay-5">
+                        <div class="category-icon">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                        <h4 class="category-name">Beverages</h4>
+                        <span class="category-count">20 Items</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- TODAY'S SPECIAL SECTION                    -->
+    <!-- ========================================== -->
+    <section class="section special-section" id="special">
+        <div class="special-bg" style="background-image: url('Images/backgrounds/special-bg.png');"></div>
+        <div class="special-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="special-content reveal-left">
+                        <span class="section-subtitle light">Limited Time</span>
+                        <h2 class="section-title light">Today's Special</h2>
+                        <div class="section-divider light"></div>
+                        <h3 class="special-dish-name">Pan-Seared Scallops</h3>
+                        <p class="special-description">
+                            Hand-dived Scottish scallops, cauliflower purée, crispy pancetta, 
+                            brown butter foam, and micro herbs. A symphony of textures and flavors 
+                            that captures the essence of the ocean.
+                        </p>
+                        <ul class="special-features">
+                            <li><i class="fas fa-check-circle"></i> Fresh daily catch</li>
+                            <li><i class="fas fa-check-circle"></i> Chef's special recipe</li>
+                            <li><i class="fas fa-check-circle"></i> Limited availability</li>
+                        </ul>
+                        <div class="special-price-box">
+                            <div class="price-wrapper">
+                                <span class="old-price">$85</span>
+                                <span class="new-price">$65</span>
+                            </div>
+                            <span class="price-note">Today Only</span>
+                        </div>
+                        <a href="pages/reservation.html" class="btn btn-primary-glow mt-4">
+                            <span>Reserve Now</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="special-image reveal-right">
+                        <div class="special-image-wrapper">
+                            <img src="Images/menu/special-dish.png" alt="Today's Special - Pan-Seared Scallops" loading="lazy">
+                            <div class="special-floating-badge">
+                                <span class="badge-percent">-24%</span>
+                                <span class="badge-text">OFF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- POPULAR MENU SECTION                       -->
+    <!-- ========================================== -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">From Our Kitchen</span>
+                    <h2 class="section-title reveal-up delay-1">Popular Menu</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                    <p class="section-description reveal-up delay-2">
+                        Discover our most beloved dishes, crafted with passion and the finest ingredients.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Menu Item 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card reveal-up">
+                        <div class="menu-image">
+                            <img src="Images/menu/food 4.png" alt="Truffle Risotto" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h4 class="menu-name">Truffle Risotto</h4>
+                                <span class="menu-price">$58</span>
+                            </div>
+                            <p class="menu-desc">Arborio rice, black truffle, parmesan crisp, truffle oil</p>
+                            <div class="menu-meta">
+                                <span class="menu-tag"><i class="fas fa-leaf"></i> Vegetarian</span>
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card reveal-up delay-1">
+                        <div class="menu-image">
+                            <img src="Images/menu/food 5.png" alt="Grilled Salmon" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h4 class="menu-name">Grilled Salmon</h4>
+                                <span class="menu-price">$52</span>
+                            </div>
+                            <p class="menu-desc">Atlantic salmon, lemon beurre blanc, asparagus, capers</p>
+                            <div class="menu-meta">
+                                <span class="menu-tag"><i class="fas fa-fish"></i> Seafood</span>
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card reveal-up delay-2">
+                        <div class="menu-image">
+                            <img src="Images/menu/food 6.png" alt="Lamb Rack" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h4 class="menu-name">Lamb Rack</h4>
+                                <span class="menu-price">$78</span>
+                            </div>
+                            <p class="menu-desc">New Zealand lamb, mint pesto, fondant potatoes, jus</p>
+                            <div class="menu-meta">
+                                <span class="menu-tag"><i class="fas fa-drumstick-bite"></i> Meat</span>
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card reveal-up">
+                        <div class="menu-image">
+                            <img src="Images/menu/food 7.png" alt="Tiramisu" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h4 class="menu-name">Classic Tiramisu</h4>
+                                <span class="menu-price">$18</span>
+                            </div>
+                            <p class="menu-desc">Mascarpone, espresso-soaked ladyfingers, cocoa dust</p>
+                            <div class="menu-meta">
+                                <span class="menu-tag"><i class="fas fa-birthday-cake"></i> Dessert</span>
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card reveal-up delay-1">
+                        <div class="menu-image">
+                            <img src="Images/menu/food 8.png" alt="Foie Gras" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h4 class="menu-name">Seared Foie Gras</h4>
+                                <span class="menu-price">$45</span>
+                            </div>
+                            <p class="menu-desc">Hudson Valley foie gras, fig compote, brioche toast</p>
+                            <div class="menu-meta">
+                                <span class="menu-tag"><i class="fas fa-utensils"></i> Appetizer</span>
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card reveal-up delay-2">
+                        <div class="menu-image">
+                            <img src="Images/menu/food 9.png" alt="Chocolate Fondant" loading="lazy">
+                        </div>
+                        <div class="menu-content">
+                            <div class="menu-header">
+                                <h4 class="menu-name">Chocolate Fondant</h4>
+                                <span class="menu-price">$22</span>
+                            </div>
+                            <p class="menu-desc">Valrhona dark chocolate, vanilla bean ice cream</p>
+                            <div class="menu-meta">
+                                <span class="menu-tag"><i class="fas fa-birthday-cake"></i> Dessert</span>
+                                <div class="menu-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="pages/menu.html" class="btn btn-outline-dark">
+                    <span>View Full Menu</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- WHY CHOOSE US SECTION                      -->
+    <!-- ========================================== -->
+    <section class="section why-section" id="why">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">Our Promise</span>
+                    <h2 class="section-title reveal-up delay-1">Why Choose Us</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card reveal-up">
+                        <div class="why-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="why-title">Michelin Quality</h4>
+                        <p class="why-desc">Award-winning cuisine crafted by world-renowned chefs with decades of experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card reveal-up delay-1">
+                        <div class="why-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4 class="why-title">Fresh Ingredients</h4>
+                        <p class="why-desc">We source only the finest organic and locally-sourced ingredients daily.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card reveal-up delay-2">
+                        <div class="why-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h4 class="why-title">Premium Service</h4>
+                        <p class="why-desc">Impeccable white-glove service ensuring an unforgettable dining experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card reveal-up delay-3">
+                        <div class="why-icon">
+                            <i class="fas fa-wine-bottle"></i>
+                        </div>
+                        <h4 class="why-title">Curated Wines</h4>
+                        <p class="why-desc">An extensive collection of rare and vintage wines from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- STATISTICS SECTION                         -->
+    <!-- ========================================== -->
+    <section class="section stats-section" id="stats">
+        <div class="stats-bg" style="background-image: url('Images/backgrounds/stats-bg.png');"></div>
+        <div class="stats-overlay"></div>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal-up">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal-up delay-1">
+                        <div class="stat-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Signature Dishes</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal-up delay-2">
+                        <div class="stat-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-number" data-count="50000">0</div>
+                        <div class="stat-label">Happy Guests</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item reveal-up delay-3">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">Awards Won</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- MEET OUR CHEFS SECTION                     -->
+    <!-- ========================================== -->
+    <section class="section chefs-section" id="chefs">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">The Artists</span>
+                    <h2 class="section-title reveal-up delay-1">Meet Our Chefs</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                    <p class="section-description reveal-up delay-2">
+                        World-class culinary masters who bring passion, creativity, and precision to every plate.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Chef 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-card reveal-up">
+                        <div class="chef-image">
+                            <img src="Images/chefs/chef 1.png" alt="Chef Marco Rossi" loading="lazy">
+                            <div class="chef-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="chef-info">
+                            <h4 class="chef-name">Marco Rossi</h4>
+                            <span class="chef-role">Executive Chef</span>
+                            <p class="chef-bio">25 years of experience in Michelin-starred kitchens across Europe and Asia.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-card reveal-up delay-1">
+                        <div class="chef-image">
+                            <img src="Images/chefs/chef 2.png" alt="Chef Elena Martinez" loading="lazy">
+                            <div class="chef-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="chef-info">
+                            <h4 class="chef-name">Elena Martinez</h4>
+                            <span class="chef-role">Pastry Chef</span>
+                            <p class="chef-bio">Award-winning pastry artist specializing in modern French desserts.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-card reveal-up delay-2">
+                        <div class="chef-image">
+                            <img src="Images/chefs/chef 3.png" alt="Chef Kenji Tanaka" loading="lazy">
+                            <div class="chef-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="chef-info">
+                            <h4 class="chef-name">Kenji Tanaka</h4>
+                            <span class="chef-role">Sous Chef</span>
+                            <p class="chef-bio">Fusion cuisine expert blending Japanese precision with European flavors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="pages/chefs.html" class="btn btn-outline-dark">
+                    <span>View All Chefs</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- TESTIMONIALS SECTION                       -->
+    <!-- ========================================== -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">Testimonials</span>
+                    <h2 class="section-title reveal-up delay-1">What Our Guests Say</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="testimonial-slider" id="testimonialSlider">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-item active">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "An absolutely transcendent dining experience. The Wagyu beef was the best I've ever had, 
+                                    and the service was impeccable. Savoir has set a new standard for fine dining."
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="Images/testimonials/client 1.png" alt="James Anderson" loading="lazy">
+                                    <div class="author-info">
+                                        <h5>James Anderson</h5>
+                                        <span>Food Critic, NY Times</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "We celebrated our anniversary at Savoir and it was magical. The ambiance, 
+                                    the wine pairing, and every course was perfection. Truly unforgettable."
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="Images/testimonials/client 2.png" alt="Sarah Mitchell" loading="lazy">
+                                    <div class="author-info">
+                                        <h5>Sarah Mitchell</h5>
+                                        <span>Regular Guest</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">
+                                    "As a chef myself, I'm incredibly particular. Savoir exceeded every expectation. 
+                                    The technique, the presentation, the flavors — absolutely world-class."
+                                </p>
+                                <div class="testimonial-author">
+                                    <img src="Images/testimonials/client 3.png" alt="Michael Chen" loading="lazy">
+                                    <div class="author-info">
+                                        <h5>Michael Chen</h5>
+                                        <span>Executive Chef, The Pearl</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Testimonial Controls -->
+                    <div class="testimonial-controls">
+                        <button class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="testimonial-dots" id="testimonialDots">
+                            <button class="testimonial-dot active" data-index="0" aria-label="Go to slide 1"></button>
+                            <button class="testimonial-dot" data-index="1" aria-label="Go to slide 2"></button>
+                            <button class="testimonial-dot" data-index="2" aria-label="Go to slide 3"></button>
+                        </div>
+                        <button class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- GALLERY SECTION                            -->
+    <!-- ========================================== -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">Visual Feast</span>
+                    <h2 class="section-title reveal-up delay-1">Our Gallery</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                </div>
+            </div>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter reveal-up delay-1">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="ambiance">Ambiance</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-category="food">
+                    <img src="Images/gallery/gallery 1.png" alt="Gourmet Dish" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h4 class="gallery-title">Art on a Plate</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ambiance">
+                    <img src="Images/gallery/gallery 2.png" alt="Restaurant Interior" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h4 class="gallery-title">Elegant Interior</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="Images/gallery/gallery 3.png" alt="Dessert Plating" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h4 class="gallery-title">Sweet Masterpiece</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="Images/gallery/gallery 4.png" alt="Private Event" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h4 class="gallery-title">Private Dining</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="Images/gallery/gallery 5.png" alt="Wine Pairing" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h4 class="gallery-title">Wine & Dine</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ambiance">
+                    <img src="Images/gallery/gallery 6.png" alt="Bar Area" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h4 class="gallery-title">The Bar</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="pages/gallery.html" class="btn btn-outline-dark">
+                    <span>View Full Gallery</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- RESERVATION SECTION                        -->
+    <!-- ========================================== -->
+    <section class="section reservation-section" id="reservation">
+        <div class="reservation-bg" style="background-image: url('Images/backgrounds/resarvation-bg.png');"></div>
+        <div class="reservation-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="reservation-card reveal-up">
+                        <div class="reservation-header text-center">
+                            <span class="section-subtitle">Book a Table</span>
+                            <h2 class="section-title">Make a Reservation</h2>
+                            <div class="section-divider mx-auto"></div>
+                            <p>Reserve your table for an unforgettable dining experience.</p>
+                        </div>
+                        
+                        <form class="reservation-form" id="reservationForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="resName" placeholder="Your Name" required>
+                                        <label for="resName">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="resEmail" placeholder="Email Address" required>
+                                        <label for="resEmail">Email Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="resPhone" placeholder="Phone Number" required>
+                                        <label for="resPhone">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="resGuests" placeholder="Number of Guests" min="1" max="20" required>
+                                        <label for="resGuests">Number of Guests</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control" id="resDate" required>
+                                        <label for="resDate">Date</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="resTime" required>
+                                            <option value="" disabled selected>Select Time</option>
+                                            <option value="17:00">5:00 PM</option>
+                                            <option value="17:30">5:30 PM</option>
+                                            <option value="18:00">6:00 PM</option>
+                                            <option value="18:30">6:30 PM</option>
+                                            <option value="19:00">7:00 PM</option>
+                                            <option value="19:30">7:30 PM</option>
+                                            <option value="20:00">8:00 PM</option>
+                                            <option value="20:30">8:30 PM</option>
+                                            <option value="21:00">9:00 PM</option>
+                                        </select>
+                                        <label for="resTime">Time</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="resMessage" placeholder="Special Requests" style="height: 100px;"></textarea>
+                                        <label for="resMessage">Special Requests (Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary-glow btn-lg">
+                                        <span>Confirm Reservation</span>
+                                        <i class="fas fa-calendar-check ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- NEWSLETTER SECTION                         -->
+    <!-- ========================================== -->
+    <section class="section newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="newsletter-content reveal-up">
+                        <span class="section-subtitle">Stay Updated</span>
+                        <h2 class="section-title">Join Our Newsletter</h2>
+                        <div class="section-divider mx-auto"></div>
+                        <p>Subscribe to receive exclusive offers, seasonal menu updates, and special event invitations.</p>
+                        
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                                <button type="submit" class="btn btn-primary-glow">
+                                    <span>Subscribe</span>
+                                    <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </div>
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                <label class="form-check-label" for="privacyCheck">
+                                    I agree to the privacy policy and terms of service.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <!-- About Column -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences. Every dish is a masterpiece, every visit unforgettable.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="pages/about.html">About Us</a></li>
+                                <li><a href="pages/menu.html">Our Menu</a></li>
+                                <li><a href="pages/chefs.html">Our Chefs</a></li>
+                                <li><a href="pages/gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="pages/reservation.html">Reservations</a></li>
+                                <li><a href="pages/menu.html">Private Dining</a></li>
+                                <li><a href="pages/menu.html">Catering</a></li>
+                                <li><a href="pages/menu.html">Events</a></li>
+                                <li><a href="pages/contact.html">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <span>+1 (212) 555-7890</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <span>reservations@savoir.com</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock"></i>
+                                    <span>Mon - Sun: 5:00 PM - 11:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            &copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="pages/faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ========================================== -->
+    <!-- BACK TO TOP BUTTON                         -->
+    <!-- ========================================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- ========================================== -->
+    <!-- LIGHTBOX MODAL                             -->
+    <!-- ========================================== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img src="" alt="Gallery Image" class="lightbox-image" id="lightboxImage">
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    
+    <!-- ========================================== -->
+    <!-- TOAST NOTIFICATION                         -->
+    <!-- ========================================== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong class="me-auto">Savoir</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                Message here...
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/reservation.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

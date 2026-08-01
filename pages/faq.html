@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find answers to frequently asked questions about Savoir Restaurant, reservations, dining, and more.">
+    <meta name="keywords" content="savoir faq, restaurant questions, dining faq, reservation help">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>FAQ | Savoir Restaurant</title>
+    
+    <link rel="icon" type="image/png" href="../Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                 <img src="../Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../Images/backgrounds/faq-header.png');">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="page-subtitle reveal-up">Need Help?</span>
+                    <h1 class="page-title reveal-up delay-1">Frequently Asked Questions</h1>
+                    <div class="page-breadcrumb reveal-up delay-2">
+                        <a href="../index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>FAQ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Search -->
+    <section class="section faq-search-section" id="faq-search">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-search-wrapper reveal-up">
+                        <div class="faq-search">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control" id="faqSearch" placeholder="Search for answers...">
+                        </div>
+                        <div class="faq-categories">
+                            <button class="faq-cat-btn active" data-category="all">All</button>
+                            <button class="faq-cat-btn" data-category="reservations">Reservations</button>
+                            <button class="faq-cat-btn" data-category="dining">Dining</button>
+                            <button class="faq-cat-btn" data-category="dietary">Dietary</button>
+                            <button class="faq-cat-btn" data-category="events">Events</button>
+                            <button class="faq-cat-btn" data-category="general">General</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Content -->
+    <section class="section faq-content-section" id="faq-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Reservations -->
+                    <div class="faq-category-group" data-category="reservations">
+                        <h3 class="faq-category-title reveal-up"><i class="fas fa-calendar-check me-2"></i>Reservations</h3>
+                        <div class="faq-accordion" id="faqReservations">
+                            <div class="faq-item reveal-up" data-category="reservations">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How do I make a reservation?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>You can make a reservation through our website by filling out the reservation form, calling us directly at +1 (212) 555-7890, or sending an email to reservations@savoir.com. Online reservations receive instant confirmation.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="reservations">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How far in advance should I book?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We recommend booking at least 1-2 weeks in advance for regular dining and 1-2 months ahead for weekends and special occasions. For private dining events, we suggest booking 2-3 months in advance.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="reservations">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>What is your cancellation policy?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We require at least 24 hours' notice for cancellations. Late cancellations or no-shows may incur a fee of $50 per person. For private events and large parties (8+), 72 hours' notice is required.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="reservations">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Can I modify my reservation?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, you can modify your reservation by calling us directly or replying to your confirmation email. Changes are subject to availability and must be made at least 24 hours in advance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dining -->
+                    <div class="faq-category-group" data-category="dining">
+                        <h3 class="faq-category-title reveal-up"><i class="fas fa-utensils me-2"></i>Dining Experience</h3>
+                        <div class="faq-accordion" id="faqDining">
+                            <div class="faq-item reveal-up" data-category="dining">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>What is the dress code?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We recommend smart casual or formal attire. Gentlemen are encouraged to wear collared shirts and dress shoes. Please avoid athletic wear, shorts, flip-flops, or overly casual clothing to maintain our elegant atmosphere.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="dining">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>How long does a typical meal last?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>A typical dining experience lasts 2-3 hours for our à la carte menu and 3-4 hours for the tasting menu. We recommend allowing ample time to fully enjoy the experience without feeling rushed.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="dining">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Do you offer wine pairings?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, our sommelier offers curated wine pairings for both our à la carte and tasting menus. We also have an extensive wine list featuring over 500 labels from around the world. Non-alcoholic pairings are also available.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="dining">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Is there a children's menu?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>While we don't have a dedicated children's menu, we can accommodate younger guests with simplified preparations of our dishes. We recommend our restaurant for children 8 and older for the best experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dietary -->
+                    <div class="faq-category-group" data-category="dietary">
+                        <h3 class="faq-category-title reveal-up"><i class="fas fa-leaf me-2"></i>Dietary Requirements</h3>
+                        <div class="faq-accordion" id="faqDietary">
+                            <div class="faq-item reveal-up" data-category="dietary">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Do you accommodate dietary restrictions?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Absolutely. We accommodate vegetarian, vegan, gluten-free, and most other dietary requirements. Please inform us of any restrictions when making your reservation so our chefs can prepare accordingly.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="dietary">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Can you handle severe food allergies?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, we take allergies very seriously. Our kitchen is trained to handle allergies including nuts, shellfish, dairy, and gluten. Please inform us of any severe allergies when booking, and we'll ensure your safety.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="dietary">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Do you offer halal or kosher options?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We can accommodate halal and kosher-style preparations with advance notice. Please contact us directly at least 48 hours before your reservation to discuss specific requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Events -->
+                    <div class="faq-category-group" data-category="events">
+                        <h3 class="faq-category-title reveal-up"><i class="fas fa-glass-cheers me-2"></i>Private Events</h3>
+                        <div class="faq-accordion" id="faqEvents">
+                            <div class="faq-item reveal-up" data-category="events">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Do you host private events?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, we offer private dining rooms for events ranging from intimate dinners to corporate functions. Our events team can customize menus, décor, and service to your specific needs.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="events">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>What is the capacity for private events?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Our private dining rooms accommodate 8 to 50 guests. For larger events, we offer full restaurant buyouts accommodating up to 120 guests. Contact our events team for detailed information.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="events">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Can I customize the menu for my event?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, our executive chef will work with you to create a customized menu that reflects your preferences and event theme. We offer tastings prior to your event to ensure everything is perfect.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- General -->
+                    <div class="faq-category-group" data-category="general">
+                        <h3 class="faq-category-title reveal-up"><i class="fas fa-info-circle me-2"></i>General</h3>
+                        <div class="faq-accordion" id="faqGeneral">
+                            <div class="faq-item reveal-up" data-category="general">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Do you offer gift cards?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, gift cards are available in denominations from $100 to $1,000. They can be purchased at the restaurant or ordered online for delivery. Gift cards never expire and can be used for dining and retail purchases.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="general">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Is there parking available?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We offer valet parking for $25. There are also several public parking garages within a two-block radius. We recommend arriving 15 minutes early to allow time for parking.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="general">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Are you wheelchair accessible?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, our restaurant is fully wheelchair accessible with ramps, elevators, and accessible restrooms. Please let us know if you need any special accommodations when making your reservation.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item reveal-up" data-category="general">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span>Do you have a corkage fee?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We allow outside wine with a corkage fee of $50 per bottle (limit 2 bottles per table). The wine must not be on our current wine list. Please inform us when making your reservation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- No Results -->
+                    <div class="no-results text-center py-5" id="faqNoResults" style="display: none;">
+                        <i class="fas fa-search no-results-icon"></i>
+                        <h3>No matching questions found</h3>
+                        <p>Try different keywords or <a href="contact.html">contact us directly</a>.</p>
+                        <button class="btn btn-outline-dark mt-3" id="clearFaqSearch">
+                            <span>Clear Search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Still Have Questions -->
+    <section class="section cta-section" id="still-have-questions">
+        <div class="cta-bg" style="background-image: url('../Images/backgrounds/cta-bg.png');"></div>
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="cta-content reveal-up">
+                        <h2 class="cta-title">Still Have Questions?</h2>
+                        <p class="cta-desc">Our team is here to help. Reach out to us directly and we'll get back to you within 24 hours.</p>
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="btn btn-primary-glow btn-lg">
+                                <span>Contact Us</span>
+                                <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                            <a href="reservation.html" class="btn btn-outline-light btn-lg">
+                                <span>Make a Reservation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="../index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="menu.html">Our Menu</a></li>
+                                <li><a href="chefs.html">Our Chefs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="reservation.html">Reservations</a></li>
+                                <li><a href="#">Private Dining</a></li>
+                                <li><a href="#">Catering</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i><span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span></li>
+                                <li><i class="fas fa-phone"></i><span>+1 (212) 555-7890</span></li>
+                                <li><i class="fas fa-envelope"></i><span>reservations@savoir.com</span></li>
+                                <li><i class="fas fa-clock"></i><span>Mon - Sun: 5:00 PM - 11:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">&copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/validation.js"></script>
+    
+    <!-- FAQ Search & Filter Script -->
+    <script>
+    (function() {
+        const searchInput = document.getElementById('faqSearch');
+        const categoryBtns = document.querySelectorAll('.faq-cat-btn');
+        const faqItems = document.querySelectorAll('.faq-item');
+        const categoryGroups = document.querySelectorAll('.faq-category-group');
+        const noResults = document.getElementById('faqNoResults');
+        const clearSearchBtn = document.getElementById('clearFaqSearch');
+        
+        let currentCategory = 'all';
+        let currentSearch = '';
+        
+        // Category filter
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                applyFilter();
+            });
+        });
+        
+        // Search
+        searchInput?.addEventListener('input', SavoirApp.debounce((e) => {
+            currentSearch = e.target.value.toLowerCase().trim();
+            applyFilter();
+        }, 200));
+        
+        // Clear search
+        clearSearchBtn?.addEventListener('click', () => {
+            searchInput.value = '';
+            currentSearch = '';
+            applyFilter();
+        });
+        
+        function applyFilter() {
+            let visibleCount = 0;
+            
+            faqItems.forEach(item => {
+                const category = item.dataset.category;
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                const matchesCategory = currentCategory === 'all' || category === currentCategory;
+                const matchesSearch = !currentSearch || 
+                    question.includes(currentSearch) || 
+                    answer.includes(currentSearch);
+                
+                if (matchesCategory && matchesSearch) {
+                    item.style.display = '';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                    // Close hidden items
+                    const questionBtn = item.querySelector('.faq-question');
+                    const answerDiv = item.querySelector('.faq-answer');
+                    questionBtn.setAttribute('aria-expanded', 'false');
+                    questionBtn.classList.remove('active');
+                    answerDiv.style.maxHeight = '0';
+                    answerDiv.style.opacity = '0';
+                    answerDiv.style.padding = '0 20px';
+                }
+            });
+            
+            // Show/hide category groups
+            categoryGroups.forEach(group => {
+                const groupCategory = group.dataset.category;
+                const hasVisibleItems = currentCategory === 'all' || 
+                    groupCategory === currentCategory ||
+                    group.querySelectorAll('.faq-item:not([style*="display: none"])').length > 0;
+                
+                group.style.display = hasVisibleItems ? '' : 'none';
+            });
+            
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+        
+        // Accordion functionality
+        const allFaqItems = document.querySelectorAll('.faq-item');
+        
+        allFaqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            
+            // Initial state
+            answer.style.maxHeight = '0';
+            answer.style.overflow = 'hidden';
+            answer.style.transition = 'max-height 0.35s ease, padding 0.35s ease, opacity 0.35s ease';
+            answer.style.opacity = '0';
+            answer.style.padding = '0 20px';
+            
+            question.addEventListener('click', () => {
+                const isOpen = question.getAttribute('aria-expanded') === 'true';
+                
+                // Close all others
+                allFaqItems.forEach(otherItem => {
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    
+                    if (otherQuestion !== question) {
+                        otherQuestion.setAttribute('aria-expanded', 'false');
+                        otherQuestion.classList.remove('active');
+                        otherAnswer.style.maxHeight = '0';
+                        otherAnswer.style.opacity = '0';
+                        otherAnswer.style.padding = '0 20px';
+                    }
+                });
+                
+                // Toggle current
+                question.setAttribute('aria-expanded', !isOpen);
+                question.classList.toggle('active', !isOpen);
+                
+                if (!isOpen) {
+                    answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+                    answer.style.opacity = '1';
+                    answer.style.padding = '20px';
+                } else {
+                    answer.style.maxHeight = '0';
+                    answer.style.opacity = '0';
+                    answer.style.padding = '0 20px';
+                }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

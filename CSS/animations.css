@@ -1,0 +1,830 @@
+/* ==========================================
+   ANIMATIONS.CSS
+   Keyframe Animations & Reveal Effects
+   ========================================== */
+
+/* ==========================================
+   FADE ANIMATIONS
+   ========================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================
+   ZOOM ANIMATIONS
+   ========================================== */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   SLIDE ANIMATIONS
+   ========================================== */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================
+   BOUNCE ANIMATIONS
+   ========================================== */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   FLIP ANIMATIONS
+   ========================================== */
+@keyframes flipInX {
+    from {
+        opacity: 0;
+        transform: perspective(400px) rotateX(90deg);
+    }
+    40% {
+        transform: perspective(400px) rotateX(-20deg);
+    }
+    60% {
+        opacity: 1;
+        transform: perspective(400px) rotateX(10deg);
+    }
+    80% {
+        transform: perspective(400px) rotateX(-5deg);
+    }
+    to {
+        opacity: 1;
+        transform: perspective(400px) rotateX(0);
+    }
+}
+
+/* ==========================================
+   ROTATE ANIMATIONS
+   ========================================== */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+/* ==========================================
+   SCALE ANIMATIONS
+   ========================================== */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   SPECIAL EFFECTS
+   ========================================== */
+@keyframes blurIn {
+    from {
+        opacity: 0;
+        filter: blur(20px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes clipReveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes clipRevealVertical {
+    from {
+        clip-path: inset(100% 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* ==========================================
+   LOADER ANIMATIONS
+   ========================================== */
+@keyframes loaderSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes loaderProgress {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 70%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   TEXT ANIMATIONS
+   ========================================== */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--color-primary);
+    }
+}
+
+@keyframes textReveal {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes textRotate {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(20px) rotateX(-90deg);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+/* ==========================================
+   GRADIENT ANIMATIONS
+   ========================================== */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(201, 169, 110, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(201, 169, 110, 0.6);
+    }
+}
+
+/* ==========================================
+   SCROLL INDICATOR
+   ========================================== */
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+/* ==========================================
+   HERO SLIDER ANIMATIONS
+   ========================================== */
+@keyframes heroSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes heroSlideOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
+/* ==========================================
+   COUNTER ANIMATION
+   ========================================== */
+@keyframes counterPop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   NAVBAR ANIMATIONS
+   ========================================== */
+@keyframes navbarSlideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   MODAL ANIMATIONS
+   ========================================== */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================
+   TOAST ANIMATIONS
+   ========================================== */
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes toastSlideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* ==========================================
+   ACCORDION ANIMATIONS
+   ========================================== */
+@keyframes accordionOpen {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+@keyframes accordionClose {
+    from {
+        opacity: 1;
+        max-height: 500px;
+    }
+    to {
+        opacity: 0;
+        max-height: 0;
+    }
+}
+
+/* ==========================================
+   RIPPLE EFFECT
+   ========================================== */
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* ==========================================
+   STAGGER DELAYS
+   ========================================== */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+.delay-6 {
+    animation-delay: 0.6s;
+}
+
+.delay-7 {
+    animation-delay: 0.7s;
+}
+
+.delay-8 {
+    animation-delay: 0.8s;
+}
+
+/* ==========================================
+   SCROLL REVEAL CLASSES
+   ========================================== */
+.reveal {
+    opacity: 0;
+    transition: opacity var(--duration-slow) var(--ease-out),
+                transform var(--duration-slow) var(--ease-out);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity var(--duration-slower) var(--ease-expo-out),
+                transform var(--duration-slower) var(--ease-expo-out);
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-down {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity var(--duration-slower) var(--ease-expo-out),
+                transform var(--duration-slower) var(--ease-expo-out);
+}
+
+.reveal-down.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity var(--duration-slower) var(--ease-expo-out),
+                transform var(--duration-slower) var(--ease-expo-out);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity var(--duration-slower) var(--ease-expo-out),
+                transform var(--duration-slower) var(--ease-expo-out);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-zoom {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity var(--duration-slower) var(--ease-expo-out),
+                transform var(--duration-slower) var(--ease-expo-out);
+}
+
+.reveal-zoom.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.reveal-blur {
+    opacity: 0;
+    filter: blur(15px);
+    transition: opacity var(--duration-slower) var(--ease-expo-out),
+                filter var(--duration-slower) var(--ease-expo-out);
+}
+
+.reveal-blur.active {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.reveal-clip {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transition: opacity var(--duration-slower) var(--ease-expo-out),
+                clip-path var(--duration-slower) var(--ease-expo-out);
+}
+
+.reveal-clip.active {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+}
+
+/* ==========================================
+   ANIMATION DURATION UTILITIES
+   ========================================== */
+.duration-fast {
+    animation-duration: var(--duration-fast);
+}
+
+.duration-base {
+    animation-duration: var(--duration-base);
+}
+
+.duration-slow {
+    animation-duration: var(--duration-slow);
+}
+
+.duration-slower {
+    animation-duration: var(--duration-slower);
+}
+
+.duration-slowest {
+    animation-duration: var(--duration-slowest);
+}
+
+/* ==========================================
+   ANIMATION FILL MODE
+   ========================================== */
+.fill-forwards {
+    animation-fill-mode: forwards;
+}
+
+.fill-both {
+    animation-fill-mode: both;
+}
+
+/* ==========================================
+   ANIMATION ITERATION
+   ========================================== */
+.infinite {
+    animation-iteration-count: infinite;
+}
+
+/* ==========================================
+   PRE-BUILT ANIMATION CLASSES
+   ========================================== */
+.animate-fade-in {
+    animation: fadeIn var(--duration-slow) var(--ease-out) forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp var(--duration-slower) var(--ease-expo-out) forwards;
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown var(--duration-slower) var(--ease-expo-out) forwards;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft var(--duration-slower) var(--ease-expo-out) forwards;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight var(--duration-slower) var(--ease-expo-out) forwards;
+}
+
+.animate-zoom-in {
+    animation: zoomIn var(--duration-slower) var(--ease-expo-out) forwards;
+}
+
+.animate-zoom-out {
+    animation: zoomOut var(--duration-slower) var(--ease-out) forwards;
+}
+
+.animate-bounce-in {
+    animation: bounceIn var(--duration-slower) var(--ease-bounce) forwards;
+}
+
+.animate-bounce-in-up {
+    animation: bounceInUp var(--duration-slower) var(--ease-bounce) forwards;
+}
+
+.animate-flip-in-x {
+    animation: flipInX var(--duration-slower) var(--ease-out) forwards;
+}
+
+.animate-rotate-in {
+    animation: rotateIn var(--duration-slower) var(--ease-expo-out) forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn var(--duration-slower) var(--ease-bounce) forwards;
+}
+
+.animate-blur-in {
+    animation: blurIn var(--duration-slower) var(--ease-out) forwards;
+}
+
+.animate-clip-reveal {
+    animation: clipReveal var(--duration-slower) var(--ease-expo-out) forwards;
+}
+
+/* ==========================================
+   HOVER ANIMATIONS
+   ========================================== */
+.hover-lift {
+    transition: var(--transform-slow), box-shadow var(--transition-slow);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.hover-scale {
+    transition: var(--transform-base);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-rotate {
+    transition: var(--transform-base);
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.hover-glow {
+    transition: box-shadow var(--transition-slow);
+}
+
+.hover-glow:hover {
+    box-shadow: var(--shadow-gold);
+}
+
+/* ==========================================
+   PARALLAX LAYERS
+   ========================================== */
+.parallax-slow {
+    will-change: transform;
+}
+
+.parallax-medium {
+    will-change: transform;
+}
+
+.parallax-fast {
+    will-change: transform;
+}
+
+/* ==========================================
+   REDUCED MOTION
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-up,
+    .reveal-down,
+    .reveal-left,
+    .reveal-right,
+    .reveal-zoom,
+    .reveal-blur,
+    .reveal-clip {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        clip-path: none;
+        transition: none;
+    }
+    
+    .animate-fade-in,
+    .animate-fade-in-up,
+    .animate-fade-in-down,
+    .animate-fade-in-left,
+    .animate-fade-in-right,
+    .animate-zoom-in,
+    .animate-zoom-out,
+    .animate-bounce-in,
+    .animate-bounce-in-up,
+    .animate-flip-in-x,
+    .animate-rotate-in,
+    .animate-scale-in,
+    .animate-blur-in,
+    .animate-clip-reveal {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        filter: none;
+        clip-path: none;
+    }
+}

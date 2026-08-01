@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve your table at Savoir - Michelin-starred fine dining restaurant. Book online for an unforgettable culinary experience.">
+    <meta name="keywords" content="restaurant reservation, book table, fine dining reservation, savoir booking">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>Reservations | Savoir Restaurant</title>
+    
+    <link rel="icon" type="image/png" href="../Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/utilities.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                 <img src="../Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../Images/backgrounds/resarvation-header.png');">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="page-subtitle reveal-up">Book Your Experience</span>
+                    <h1 class="page-title reveal-up delay-1">Reservations</h1>
+                    <div class="page-breadcrumb reveal-up delay-2">
+                        <a href="../index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Reservation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reservation Info -->
+    <section class="section reservation-info-section" id="reservation-info">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="reservation-info-card reveal-up">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h4>By Phone</h4>
+                        <p>+1 (212) 555-7890</p>
+                        <span>Mon-Sun, 10am - 10pm</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="reservation-info-card reveal-up delay-1">
+                        <div class="info-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h4>Online Booking</h4>
+                        <p>24/7 Available</p>
+                        <span>Instant Confirmation</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="reservation-info-card reveal-up delay-2">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>By Email</h4>
+                        <p>reservations@savoir.com</p>
+                        <span>Response within 24h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reservation Form -->
+    <section class="section reservation-form-section" id="reservation-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="reservation-card-large reveal-up">
+                        <div class="reservation-header text-center mb-5">
+                            <span class="section-subtitle">Book a Table</span>
+                            <h2 class="section-title">Make Your Reservation</h2>
+                            <div class="section-divider mx-auto"></div>
+                            <p>Complete the form below and we'll confirm your reservation shortly.</p>
+                        </div>
+                        
+                        <form class="reservation-form" id="reservationForm" data-validate>
+                            <div class="row g-4">
+                                <!-- Personal Details -->
+                                <div class="col-12">
+                                    <h4 class="form-section-title"><i class="fas fa-user me-2"></i>Personal Details</h4>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="resName" name="name" placeholder="Your Name" required minlength="2" maxlength="50">
+                                        <label for="resName">Your Name *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="resEmail" name="email" placeholder="Email Address" required>
+                                        <label for="resEmail">Email Address *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="resPhone" name="phone" placeholder="Phone Number" required>
+                                        <label for="resPhone">Phone Number *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="resOccasion" name="occasion">
+                                            <option value="" selected>Select Occasion</option>
+                                            <option value="birthday">Birthday</option>
+                                            <option value="anniversary">Anniversary</option>
+                                            <option value="business">Business Dinner</option>
+                                            <option value="date">Date Night</option>
+                                            <option value="family">Family Gathering</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label for="resOccasion">Occasion (Optional)</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Reservation Details -->
+                                <div class="col-12 mt-3">
+                                    <h4 class="form-section-title"><i class="fas fa-calendar-alt me-2"></i>Reservation Details</h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control" id="resDate" name="date" required>
+                                        <label for="resDate">Date *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="resTime" name="time" required>
+                                            <option value="" disabled selected>Select Time</option>
+                                        </select>
+                                        <label for="resTime">Time *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" id="resGuests" name="guests" placeholder="Number of Guests" min="1" max="20" required>
+                                        <label for="resGuests">Number of Guests *</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Seating Preference -->
+                                <div class="col-12 mt-3">
+                                    <h4 class="form-section-title"><i class="fas fa-chair me-2"></i>Seating Preference</h4>
+                                </div>
+                                <div class="col-12">
+                                    <div class="seating-options">
+                                        <label class="seating-option">
+                                            <input type="radio" name="seating" value="main" checked>
+                                            <div class="seating-card">
+                                                <i class="fas fa-utensils"></i>
+                                                <span>Main Dining</span>
+                                            </div>
+                                        </label>
+                                        <label class="seating-option">
+                                            <input type="radio" name="seating" value="window">
+                                            <div class="seating-card">
+                                                <i class="fas fa-window-maximize"></i>
+                                                <span>Window Seat</span>
+                                            </div>
+                                        </label>
+                                        <label class="seating-option">
+                                            <input type="radio" name="seating" value="private">
+                                            <div class="seating-card">
+                                                <i class="fas fa-door-closed"></i>
+                                                <span>Private Room</span>
+                                            </div>
+                                        </label>
+                                        <label class="seating-option">
+                                            <input type="radio" name="seating" value="bar">
+                                            <div class="seating-card">
+                                                <i class="fas fa-wine-glass"></i>
+                                                <span>Chef's Counter</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Special Requests -->
+                                <div class="col-12 mt-3">
+                                    <h4 class="form-section-title"><i class="fas fa-comment-alt me-2"></i>Special Requests</h4>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="resMessage" name="message" placeholder="Special Requests" style="height: 120px;"></textarea>
+                                        <label for="resMessage">Dietary restrictions, allergies, special requests...</label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Terms -->
+                                <div class="col-12">
+                                    <div class="form-check reservation-terms">
+                                        <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                        <label class="form-check-label" for="termsCheck">
+                                            I agree to the <a href="#">cancellation policy</a> and confirm that all information provided is accurate. *
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <!-- Submit -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary-glow btn-lg">
+                                        <span>Confirm Reservation</span>
+                                        <i class="fas fa-calendar-check ms-2"></i>
+                                    </button>
+                                    <p class="reservation-note mt-3">
+                                        <i class="fas fa-info-circle me-1"></i>
+                                        You will receive a confirmation email within 15 minutes.
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reservation Policy -->
+    <section class="section policy-section" id="policy">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="policy-content reveal-up">
+                        <h3 class="policy-title">Reservation Policy</h3>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="policy-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <h5>Timeliness</h5>
+                                        <p>We hold reservations for 15 minutes past the scheduled time. Please call if you're running late.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="policy-item">
+                                    <i class="fas fa-user-friends"></i>
+                                    <div>
+                                        <h5>Group Size</h5>
+                                        <p>For parties of 8 or more, please contact us directly for special arrangements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="policy-item">
+                                    <i class="fas fa-tshirt"></i>
+                                    <div>
+                                        <h5>Dress Code</h5>
+                                        <p>Smart casual or formal attire is recommended. No athletic wear or flip-flops.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="policy-item">
+                                    <i class="fas fa-ban"></i>
+                                    <div>
+                                        <h5>Cancellation</h5>
+                                        <p>Please cancel at least 24 hours in advance to avoid a cancellation fee.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="../index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="menu.html">Our Menu</a></li>
+                                <li><a href="chefs.html">Our Chefs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="reservation.html">Reservations</a></li>
+                                <li><a href="#">Private Dining</a></li>
+                                <li><a href="#">Catering</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i><span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span></li>
+                                <li><i class="fas fa-phone"></i><span>+1 (212) 555-7890</span></li>
+                                <li><i class="fas fa-envelope"></i><span>reservations@savoir.com</span></li>
+                                <li><i class="fas fa-clock"></i><span>Mon - Sun: 5:00 PM - 11:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">&copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong class="me-auto">Savoir</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">Message here...</div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/reservation.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/validation.js"></script>
+</body>
+</html>

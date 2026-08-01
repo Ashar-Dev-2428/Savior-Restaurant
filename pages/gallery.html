@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Savoir's visual gallery showcasing our exquisite dishes, elegant ambiance, and memorable events.">
+    <meta name="keywords" content="savoir gallery, restaurant photos, food photography, fine dining ambiance">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>Gallery | Savoir Restaurant</title>
+    
+    <link rel="icon" type="image/png" href="../Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/utilities.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                 <img src="../Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../Images/backgrounds/gallery-header.png');">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="page-subtitle reveal-up">Visual Feast</span>
+                    <h1 class="page-title reveal-up delay-1">Our Gallery</h1>
+                    <div class="page-breadcrumb reveal-up delay-2">
+                        <a href="../index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Gallery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Filter -->
+    <section class="section gallery-filter-section" id="gallery-filter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="gallery-filter reveal-up">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="food">Food</button>
+                        <button class="filter-btn" data-filter="ambiance">Ambiance</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="chefs">Behind the Scenes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Grid -->
+    <section class="section gallery-full-section" id="gallery-full">
+        <div class="container">
+            <div class="gallery-masonry" id="galleryMasonry">
+                <!-- Food Items -->
+                <div class="gallery-masonry-item" data-category="food">
+                    <img src="../Images/gallery/gallery 1.png" alt="Gourmet Dish" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Art on a Plate</h4>
+                        <span class="gallery-category">Food</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item tall" data-category="food">
+                    <img src="../Images/menu/food 1.png" alt="Wagyu Beef" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Wagyu Perfection</h4>
+                        <span class="gallery-category">Food</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item wide" data-category="food">
+                    <img src="../Images/menu/food 2.png" alt="Lobster Dish" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Lobster Thermidor</h4>
+                        <span class="gallery-category">Food</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item" data-category="food">
+                    <img src="../Images/menu/food 4.png" alt="Truffle Risotto" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Truffle Risotto</h4>
+                        <span class="gallery-category">Food</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item" data-category="food">
+                    <img src="../Images/menu/food 7.png" alt="Tiramisu" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Classic Tiramisu</h4>
+                        <span class="gallery-category">Food</span>
+                    </div>
+                </div>
+                
+                <!-- Ambiance Items -->
+                <div class="gallery-masonry-item wide" data-category="ambiance">
+                    <img src="../Images/gallery/gallery 2.png" alt="Restaurant Interior" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Elegant Interior</h4>
+                        <span class="gallery-category">Ambiance</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item" data-category="ambiance">
+                    <img src="../Images/gallery/gallery 6.png" alt="Bar Area" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">The Bar</h4>
+                        <span class="gallery-category">Ambiance</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item tall" data-category="ambiance">
+                    <img src="../Images/backgrounds/about-header.png" alt="Dining Room" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Main Dining Room</h4>
+                        <span class="gallery-category">Ambiance</span>
+                    </div>
+                </div>
+                
+                <!-- Events Items -->
+                <div class="gallery-masonry-item" data-category="events">
+                    <img src="../Images/gallery/gallery 4.png" alt="Private Event" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Private Dining</h4>
+                        <span class="gallery-category">Events</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item wide" data-category="events">
+                    <img src="../Images/gallery/event 2.png" alt="Wine Tasting" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Wine Tasting Evening</h4>
+                        <span class="gallery-category">Events</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item" data-category="events">
+                    <img src="../Images/gallery/event 3.png" alt="Chef's Table" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Chef's Table Experience</h4>
+                        <span class="gallery-category">Events</span>
+                    </div>
+                </div>
+                
+                <!-- Behind the Scenes -->
+                <div class="gallery-masonry-item" data-category="chefs">
+                    <img src="../Images/chefs/chef 1.png" alt="Chef Marco" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Chef Marco Rossi</h4>
+                        <span class="gallery-category">Behind the Scenes</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item" data-category="chefs">
+                    <img src="../Images/chefs/chef 2.png" alt="Chef Elena" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Chef Elena Martinez</h4>
+                        <span class="gallery-category">Behind the Scenes</span>
+                    </div>
+                </div>
+                <div class="gallery-masonry-item wide" data-category="chefs">
+                    <img src="../Images/chefs/chef 3.png" alt="Chef Kenji" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        <h4 class="gallery-title">Chef Kenji Tanaka</h4>
+                        <span class="gallery-category">Behind the Scenes</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- No Results -->
+            <div class="no-results text-center py-5" id="galleryNoResults" style="display: none;">
+                <i class="fas fa-images no-results-icon"></i>
+                <h3>No images found</h3>
+                <p>Try selecting a different category.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Instagram CTA -->
+    <section class="section instagram-section" id="instagram">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="instagram-content reveal-up">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                        <h2 class="section-title">Follow Our Journey</h2>
+                        <p class="section-description">Stay connected with us on Instagram for daily inspiration, behind-the-scenes moments, and exclusive offers.</p>
+                        <a href="#" class="btn btn-outline-dark btn-lg">
+                            <i class="fab fa-instagram me-2"></i>
+                            <span>@savoir_restaurant</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="../index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="menu.html">Our Menu</a></li>
+                                <li><a href="chefs.html">Our Chefs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="reservation.html">Reservations</a></li>
+                                <li><a href="#">Private Dining</a></li>
+                                <li><a href="#">Catering</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i><span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span></li>
+                                <li><i class="fas fa-phone"></i><span>+1 (212) 555-7890</span></li>
+                                <li><i class="fas fa-envelope"></i><span>reservations@savoir.com</span></li>
+                                <li><i class="fas fa-clock"></i><span>Mon - Sun: 5:00 PM - 11:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">&copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img src="" alt="Gallery Image" class="lightbox-image" id="lightboxImage">
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong class="me-auto">Savoir</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">Message here...</div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/validation.js"></script>
+    
+    <!-- Gallery Masonry & Filter Script -->
+    <script>
+    (function() {
+        const filterBtns = document.querySelectorAll('.gallery-filter-section .filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-masonry-item');
+        const noResults = document.getElementById('galleryNoResults');
+        
+        let currentFilter = 'all';
+        
+        // Filter functionality
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                applyFilter();
+            });
+        });
+        
+        function applyFilter() {
+            let visibleCount = 0;
+            
+            galleryItems.forEach(item => {
+                const category = item.dataset.category;
+                const matches = currentFilter === 'all' || category === currentFilter;
+                
+                if (matches) {
+                    item.style.display = '';
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.9)';
+                    
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, visibleCount * 50);
+                    
+                    visibleCount++;
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 400);
+                }
+            });
+            
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+        
+        // Lightbox functionality for masonry items
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        
+        let currentImageIndex = 0;
+        let visibleItems = [];
+        
+        function updateVisibleItems() {
+            visibleItems = Array.from(galleryItems).filter(item => 
+                currentFilter === 'all' || item.dataset.category === currentFilter
+            );
+        }
+        
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                updateVisibleItems();
+                currentImageIndex = visibleItems.indexOf(item);
+                openLightbox();
+            });
+        });
+        
+        function openLightbox() {
+            const currentItem = visibleItems[currentImageIndex];
+            const img = currentItem.querySelector('img');
+            const title = currentItem.querySelector('.gallery-title')?.textContent || '';
+            
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightboxCaption.textContent = title;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % visibleItems.length;
+            animateLightbox('next');
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + visibleItems.length) % visibleItems.length;
+            animateLightbox('prev');
+        }
+        
+        function animateLightbox(direction) {
+            const translateX = direction === 'next' ? '-30px' : '30px';
+            lightboxImage.style.opacity = '0';
+            lightboxImage.style.transform = `translateX(${translateX})`;
+            
+            setTimeout(() => {
+                const currentItem = visibleItems[currentImageIndex];
+                const img = currentItem.querySelector('img');
+                const title = currentItem.querySelector('.gallery-title')?.textContent || '';
+                
+                lightboxImage.src = img.src;
+                lightboxImage.alt = img.alt;
+                lightboxCaption.textContent = title;
+                
+                lightboxImage.style.transition = 'none';
+                lightboxImage.style.transform = direction === 'next' ? 'translateX(30px)' : 'translateX(-30px)';
+                
+                requestAnimationFrame(() => {
+                    lightboxImage.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                    lightboxImage.style.opacity = '1';
+                    lightboxImage.style.transform = 'translateX(0)';
+                });
+            }, 300);
+        }
+        
+        // Lightbox events
+        lightboxClose?.addEventListener('click', closeLightbox);
+        lightboxNext?.addEventListener('click', (e) => { e.stopPropagation(); nextImage(); });
+        lightboxPrev?.addEventListener('click', (e) => { e.stopPropagation(); prevImage(); });
+        
+        lightbox?.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape': closeLightbox(); break;
+                case 'ArrowRight': nextImage(); break;
+                case 'ArrowLeft': prevImage(); break;
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

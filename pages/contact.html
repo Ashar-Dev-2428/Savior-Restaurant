@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Savoir Restaurant for reservations, private dining, events, and inquiries.">
+    <meta name="keywords" content="contact savoir, restaurant contact, private dining inquiry, event booking">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>Contact Us | Savoir Restaurant</title>
+    
+    <link rel="icon" type="image/png" href="../Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/utilities.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                 <img src="../Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../Images/backgrounds/contact-header.png');">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="page-subtitle reveal-up">Get in Touch</span>
+                    <h1 class="page-title reveal-up delay-1">Contact Us</h1>
+                    <div class="page-breadcrumb reveal-up delay-2">
+                        <a href="../index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Contact</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Info Cards -->
+    <section class="section contact-info-section" id="contact-info">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card reveal-up">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Visit Us</h4>
+                        <p>123 Gourmet Avenue<br>Culinary District<br>New York, NY 10001</p>
+                        <a href="#" class="contact-info-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card reveal-up delay-1">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Call Us</h4>
+                        <p>Reservations: +1 (212) 555-7890<br>Events: +1 (212) 555-7891<br>Office: +1 (212) 555-7892</p>
+                        <a href="tel:+12125557890" class="contact-info-link">Call Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card reveal-up delay-2">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email Us</h4>
+                        <p>reservations@savoir.com<br>events@savoir.com<br>careers@savoir.com</p>
+                        <a href="mailto:reservations@savoir.com" class="contact-info-link">Send Email <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="contact-info-card reveal-up delay-3">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Opening Hours</h4>
+                        <p>Mon - Thu: 5:00 PM - 10:00 PM<br>Fri - Sat: 5:00 PM - 11:00 PM<br>Sun: 4:00 PM - 9:00 PM</p>
+                        <a href="reservation.html" class="contact-info-link">Book a Table <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form & Map -->
+    <section class="section contact-form-section" id="contact-form">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper reveal-left">
+                        <span class="section-subtitle">Send a Message</span>
+                        <h2 class="section-title">We'd Love to Hear From You</h2>
+                        <div class="section-divider divider-left"></div>
+                        <p class="mb-4">Have a question, feedback, or special request? Fill out the form below and our team will get back to you within 24 hours.</p>
+                        
+                        <form class="contact-form" id="contactForm" data-validate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="contactName" name="name" placeholder="Your Name" required minlength="2">
+                                        <label for="contactName">Your Name *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="contactEmail" name="email" placeholder="Email Address" required>
+                                        <label for="contactEmail">Email Address *</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="Phone Number">
+                                        <label for="contactPhone">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="contactSubject" name="subject" required>
+                                            <option value="" selected>Select Subject</option>
+                                            <option value="reservation">Reservation Inquiry</option>
+                                            <option value="private">Private Dining</option>
+                                            <option value="event">Event Booking</option>
+                                            <option value="feedback">Feedback</option>
+                                            <option value="career">Careers</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <label for="contactSubject">Subject *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="contactMessage" name="message" placeholder="Your Message" style="height: 150px;" required minlength="10"></textarea>
+                                        <label for="contactMessage">Your Message *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary-glow btn-lg">
+                                        <span>Send Message</span>
+                                        <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-map-wrapper reveal-right">
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2!2d-73.98!3d40.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzAwLjAiTiA3M8KwNTgnNDguMCJX!5e0!3m2!1sen!2sus!4v1" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0; min-height: 400px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="map-info">
+                            <h5><i class="fas fa-map-pin me-2"></i>Savoir Restaurant</h5>
+                            <p>123 Gourmet Avenue, New York, NY 10001</p>
+                            <div class="map-directions">
+                                <a href="#" class="btn btn-sm btn-outline-dark">
+                                    <i class="fab fa-google me-1"></i> Google Maps
+                                </a>
+                                <a href="#" class="btn btn-sm btn-outline-dark">
+                                    <i class="fab fa-apple me-1"></i> Apple Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Preview -->
+    <section class="section faq-preview-section" id="faq-preview">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">Common Questions</span>
+                    <h2 class="section-title reveal-up delay-1">Frequently Asked Questions</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-accordion" id="faqAccordion">
+                        <div class="faq-item reveal-up">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Do you accommodate dietary restrictions and allergies?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Absolutely. We take dietary restrictions and allergies very seriously. Please inform us of any requirements when making your reservation, and our chefs will gladly accommodate your needs with customized dishes.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item reveal-up delay-1">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>What is your dress code?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We recommend smart casual or formal attire to complement the elegant ambiance of our restaurant. Please avoid athletic wear, flip-flops, or overly casual clothing.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item reveal-up delay-2">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Can I host a private event at Savoir?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, we offer private dining rooms for events ranging from intimate gatherings to corporate functions. Contact our events team at events@savoir.com for customized packages.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item reveal-up">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Do you offer gift cards?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, gift cards are available in various denominations and make the perfect gift for any occasion. They can be purchased at the restaurant or ordered online for delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="faq.html" class="btn btn-outline-dark">
+                            <span>View All FAQs</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="../index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="menu.html">Our Menu</a></li>
+                                <li><a href="chefs.html">Our Chefs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="reservation.html">Reservations</a></li>
+                                <li><a href="#">Private Dining</a></li>
+                                <li><a href="#">Catering</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i><span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span></li>
+                                <li><i class="fas fa-phone"></i><span>+1 (212) 555-7890</span></li>
+                                <li><i class="fas fa-envelope"></i><span>reservations@savoir.com</span></li>
+                                <li><i class="fas fa-clock"></i><span>Mon - Sun: 5:00 PM - 11:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">&copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong class="me-auto">Savoir</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">Message here...</div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/validation.js"></script>
+    
+    <!-- Contact Form & FAQ Script -->
+    <script>
+    (function() {
+        // Contact form handling
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+            
+            setTimeout(() => {
+                SavoirApp.showToast('Thank you for your message! We will respond within 24 hours.', 'success');
+                this.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }, 2000);
+        });
+        
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            
+            // Initial state
+            answer.style.maxHeight = '0';
+            answer.style.overflow = 'hidden';
+            answer.style.transition = 'max-height 0.35s ease, padding 0.35s ease, opacity 0.35s ease';
+            answer.style.opacity = '0';
+            answer.style.padding = '0 20px';
+            
+            question.addEventListener('click', () => {
+                const isOpen = question.getAttribute('aria-expanded') === 'true';
+                
+                // Close all others
+                faqItems.forEach(otherItem => {
+                    const otherQuestion = otherItem.querySelector('.faq-question');
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    
+                    if (otherQuestion !== question) {
+                        otherQuestion.setAttribute('aria-expanded', 'false');
+                        otherQuestion.classList.remove('active');
+                        otherAnswer.style.maxHeight = '0';
+                        otherAnswer.style.opacity = '0';
+                        otherAnswer.style.padding = '0 20px';
+                    }
+                });
+                
+                // Toggle current
+                question.setAttribute('aria-expanded', !isOpen);
+                question.classList.toggle('active', !isOpen);
+                
+                if (!isOpen) {
+                    answer.style.maxHeight = answer.scrollHeight + 40 + 'px';
+                    answer.style.opacity = '1';
+                    answer.style.padding = '20px';
+                } else {
+                    answer.style.maxHeight = '0';
+                    answer.style.opacity = '0';
+                    answer.style.padding = '0 20px';
+                }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

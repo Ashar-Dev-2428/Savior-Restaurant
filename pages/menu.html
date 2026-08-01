@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Savoir's exquisite menu featuring appetizers, main courses, seafood, desserts, and curated wines.">
+    <meta name="keywords" content="savoir menu, fine dining menu, gourmet dishes, restaurant menu, michelin star food">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>Our Menu | Savoir Restaurant</title>
+    
+    <link rel="icon" type="image/png" href="../Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/utilities.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                 <img src="../Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../Images/backgrounds/menu-header.png');">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="page-subtitle reveal-up">Culinary Artistry</span>
+                    <h1 class="page-title reveal-up delay-1">Our Menu</h1>
+                    <div class="page-breadcrumb reveal-up delay-2">
+                        <a href="../index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Menu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Search & Filter -->
+    <section class="section menu-filter-section" id="menu-filter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="menu-search-wrapper reveal-up">
+                        <div class="menu-search">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="form-control" id="menuSearch" placeholder="Search dishes, ingredients...">
+                        </div>
+                        <div class="menu-categories-filter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="appetizer">Appetizers</button>
+                            <button class="filter-btn" data-filter="main">Main Course</button>
+                            <button class="filter-btn" data-filter="seafood">Seafood</button>
+                            <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                            <button class="filter-btn" data-filter="dessert">Desserts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Menu Items -->
+    <section class="section menu-items-section" id="menu-items">
+        <div class="container">
+            <!-- Appetizers -->
+            <div class="menu-category" data-category="appetizer">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2 class="menu-category-title reveal-up">
+                            <span class="category-icon"><i class="fas fa-utensils"></i></span>
+                            Appetizers
+                            <span class="category-line"></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="appetizer" data-name="Seared Foie Gras">
+                        <div class="menu-item-card reveal-up">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 8.png" alt="Seared Foie Gras" loading="lazy">
+                                <div class="menu-item-badge">Chef's Pick</div>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Seared Foie Gras</h4>
+                                    <span class="menu-item-price">$45</span>
+                                </div>
+                                <p class="menu-item-desc">Hudson Valley foie gras, fig compote, brioche toast, micro greens</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-fire"></i> Signature</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="appetizer" data-name="Tuna Tartare">
+                        <div class="menu-item-card reveal-up delay-1">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/appetizer 2.png" alt="Tuna Tartare" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Tuna Tartare</h4>
+                                    <span class="menu-item-price">$38</span>
+                                </div>
+                                <p class="menu-item-desc">Yellowfin tuna, avocado, sesame, wasabi aioli, wonton crisps</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-fish"></i> Fresh</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="appetizer" data-name="Burrata Salad">
+                        <div class="menu-item-card reveal-up delay-2">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/appetizer 3.png" alt="Burrata Salad" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Burrata Salad</h4>
+                                    <span class="menu-item-price">$28</span>
+                                </div>
+                                <p class="menu-item-desc">Heirloom tomatoes, fresh burrata, basil oil, balsamic reduction</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-leaf"></i> Vegetarian</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Course -->
+            <div class="menu-category" data-category="main">
+                <div class="row mb-4 mt-5">
+                    <div class="col-12">
+                        <h2 class="menu-category-title reveal-up">
+                            <span class="category-icon"><i class="fas fa-drumstick-bite"></i></span>
+                            Main Course
+                            <span class="category-line"></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="main" data-name="Wagyu Beef Tenderloin">
+                        <div class="menu-item-card reveal-up">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 1.png" alt="Wagyu Beef Tenderloin" loading="lazy">
+                                <div class="menu-item-badge signature">Signature</div>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Wagyu Beef Tenderloin</h4>
+                                    <span class="menu-item-price">$145</span>
+                                </div>
+                                <p class="menu-item-desc">A5 Japanese Wagyu, truffle jus, roasted bone marrow, seasonal vegetables</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-crown"></i> Premium</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="main" data-name="Duck Confit">
+                        <div class="menu-item-card reveal-up delay-1">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 3.png" alt="Duck Confit" loading="lazy">
+                                <div class="menu-item-badge new">New</div>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Duck Confit</h4>
+                                    <span class="menu-item-price">$72</span>
+                                </div>
+                                <p class="menu-item-desc">Slow-cooked duck leg, cherry gastrique, parsnip purée, crispy skin</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-fire"></i> Popular</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="main" data-name="Lamb Rack">
+                        <div class="menu-item-card reveal-up delay-2">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 6.png" alt="Lamb Rack" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Lamb Rack</h4>
+                                    <span class="menu-item-price">$78</span>
+                                </div>
+                                <p class="menu-item-desc">New Zealand lamb, mint pesto, fondant potatoes, red wine jus</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-drumstick-bite"></i> Meat</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seafood -->
+            <div class="menu-category" data-category="seafood">
+                <div class="row mb-4 mt-5">
+                    <div class="col-12">
+                        <h2 class="menu-category-title reveal-up">
+                            <span class="category-icon"><i class="fas fa-fish"></i></span>
+                            Seafood
+                            <span class="category-line"></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="seafood" data-name="Lobster Thermidor">
+                        <div class="menu-item-card reveal-up">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 2.png" alt="Lobster Thermidor" loading="lazy">
+                                <div class="menu-item-badge hot">Popular</div>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Lobster Thermidor</h4>
+                                    <span class="menu-item-price">$98</span>
+                                </div>
+                                <p class="menu-item-desc">Maine lobster, cognac cream sauce, gruyère crust, herb butter</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-fish"></i> Fresh Catch</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="seafood" data-name="Grilled Salmon">
+                        <div class="menu-item-card reveal-up delay-1">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 5.png" alt="Grilled Salmon" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Grilled Salmon</h4>
+                                    <span class="menu-item-price">$52</span>
+                                </div>
+                                <p class="menu-item-desc">Atlantic salmon, lemon beurre blanc, asparagus, capers</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-heart"></i> Healthy</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="seafood" data-name="Pan-Seared Scallops">
+                        <div class="menu-item-card reveal-up delay-2">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/special-dish.png" alt="Pan-Seared Scallops" loading="lazy">
+                                <div class="menu-item-badge">Special</div>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Pan-Seared Scallops</h4>
+                                    <span class="menu-item-price">$65</span>
+                                </div>
+                                <p class="menu-item-desc">Scottish scallops, cauliflower purée, crispy pancetta, brown butter</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-star"></i> Today's Special</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vegetarian -->
+            <div class="menu-category" data-category="vegetarian">
+                <div class="row mb-4 mt-5">
+                    <div class="col-12">
+                        <h2 class="menu-category-title reveal-up">
+                            <span class="category-icon"><i class="fas fa-leaf"></i></span>
+                            Vegetarian
+                            <span class="category-line"></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="vegetarian" data-name="Truffle Risotto">
+                        <div class="menu-item-card reveal-up">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 4.png" alt="Truffle Risotto" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Truffle Risotto</h4>
+                                    <span class="menu-item-price">$58</span>
+                                </div>
+                                <p class="menu-item-desc">Arborio rice, black truffle, parmesan crisp, truffle oil</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-leaf"></i> Vegetarian</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="vegetarian" data-name="Wild Mushroom Gnocchi">
+                        <div class="menu-item-card reveal-up delay-1">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/vegetarian 2.png" alt="Wild Mushroom Gnocchi" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Wild Mushroom Gnocchi</h4>
+                                    <span class="menu-item-price">$42</span>
+                                </div>
+                                <p class="menu-item-desc">House-made gnocchi, porcini mushrooms, sage brown butter, pecorino</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-leaf"></i> Vegetarian</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="vegetarian" data-name="Roasted Beet Salad">
+                        <div class="menu-item-card reveal-up delay-2">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/vegetarian 3.png" alt="Roasted Beet Salad" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Roasted Beet Salad</h4>
+                                    <span class="menu-item-price">$32</span>
+                                </div>
+                                <p class="menu-item-desc">Golden beets, goat cheese, candied walnuts, champagne vinaigrette</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-leaf"></i> Vegetarian</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desserts -->
+            <div class="menu-category" data-category="dessert">
+                <div class="row mb-4 mt-5">
+                    <div class="col-12">
+                        <h2 class="menu-category-title reveal-up">
+                            <span class="category-icon"><i class="fas fa-birthday-cake"></i></span>
+                            Desserts
+                            <span class="category-line"></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="dessert" data-name="Classic Tiramisu">
+                        <div class="menu-item-card reveal-up">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 7.png" alt="Classic Tiramisu" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Classic Tiramisu</h4>
+                                    <span class="menu-item-price">$18</span>
+                                </div>
+                                <p class="menu-item-desc">Mascarpone, espresso-soaked ladyfingers, cocoa dust, amaretto</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-heart"></i> Classic</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="dessert" data-name="Chocolate Fondant">
+                        <div class="menu-item-card reveal-up delay-1">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/food 9.png" alt="Chocolate Fondant" loading="lazy">
+                                <div class="menu-item-badge hot">Popular</div>
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Chocolate Fondant</h4>
+                                    <span class="menu-item-price">$22</span>
+                                </div>
+                                <p class="menu-item-desc">Valrhona dark chocolate, vanilla bean ice cream, raspberry coulis</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-fire"></i> Best Seller</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 menu-item-wrapper" data-category="dessert" data-name="Crème Brûlée">
+                        <div class="menu-item-card reveal-up delay-2">
+                            <div class="menu-item-image">
+                                <img src="../Images/menu/dessert 3.png" alt="Crème Brûlée" loading="lazy">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4 class="menu-item-name">Crème Brûlée</h4>
+                                    <span class="menu-item-price">$16</span>
+                                </div>
+                                <p class="menu-item-desc">Madagascar vanilla, caramelized sugar, fresh berries</p>
+                                <div class="menu-item-footer">
+                                    <span class="menu-item-tag"><i class="fas fa-star"></i> Classic</span>
+                                    <div class="menu-item-rating">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- No Results -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="text-center py-5">
+                    <i class="fas fa-search no-results-icon"></i>
+                    <h3>No dishes found</h3>
+                    <p>Try adjusting your search or filter criteria.</p>
+                    <button class="btn btn-outline-dark mt-3" id="clearSearch">
+                        <span>Clear Search</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wine Pairing CTA -->
+    <section class="section wine-cta-section" id="wine-cta">
+        <div class="wine-cta-bg" style="background-image: url('../Images/backgrounds/wine-bg.png');"></div>
+        <div class="wine-cta-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="wine-cta-content reveal-up">
+                        <span class="section-subtitle light">Curated Selection</span>
+                        <h2 class="section-title light">Wine Pairing Experience</h2>
+                        <p class="wine-cta-desc">Enhance your dining experience with our sommelier-curated wine pairings. Over 500 labels from the world's finest vineyards.</p>
+                        <a href="reservation.html" class="btn btn-primary-glow btn-lg">
+                            <span>Reserve with Wine Pairing</span>
+                            <i class="fas fa-wine-glass ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="../index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="menu.html">Our Menu</a></li>
+                                <li><a href="chefs.html">Our Chefs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="reservation.html">Reservations</a></li>
+                                <li><a href="#">Private Dining</a></li>
+                                <li><a href="#">Catering</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i><span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span></li>
+                                <li><i class="fas fa-phone"></i><span>+1 (212) 555-7890</span></li>
+                                <li><i class="fas fa-envelope"></i><span>reservations@savoir.com</span></li>
+                                <li><i class="fas fa-clock"></i><span>Mon - Sun: 5:00 PM - 11:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">&copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-info-circle me-2"></i>
+                <strong class="me-auto">Savoir</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">Message here...</div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/validation.js"></script>
+    
+    <!-- Menu Search & Filter Script -->
+    <script>
+    (function() {
+        const searchInput = document.getElementById('menuSearch');
+        const filterBtns = document.querySelectorAll('.menu-categories-filter .filter-btn');
+        const menuItems = document.querySelectorAll('.menu-item-wrapper');
+        const menuCategories = document.querySelectorAll('.menu-category');
+        const noResults = document.getElementById('noResults');
+        const clearSearchBtn = document.getElementById('clearSearch');
+        
+        let currentFilter = 'all';
+        let currentSearch = '';
+        
+        // Filter by category
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                applyFilter();
+            });
+        });
+        
+        // Search functionality
+        searchInput?.addEventListener('input', SavoirApp.debounce((e) => {
+            currentSearch = e.target.value.toLowerCase().trim();
+            applyFilter();
+        }, 200));
+        
+        // Clear search
+        clearSearchBtn?.addEventListener('click', () => {
+            searchInput.value = '';
+            currentSearch = '';
+            applyFilter();
+        });
+        
+        function applyFilter() {
+            let visibleCount = 0;
+            
+            menuItems.forEach(item => {
+                const category = item.dataset.category;
+                const name = item.dataset.name.toLowerCase();
+                const desc = item.querySelector('.menu-item-desc')?.textContent.toLowerCase() || '';
+                
+                const matchesCategory = currentFilter === 'all' || category === currentFilter;
+                const matchesSearch = !currentSearch || 
+                    name.includes(currentSearch) || 
+                    desc.includes(currentSearch);
+                
+                if (matchesCategory && matchesSearch) {
+                    item.style.display = '';
+                    item.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // Show/hide category headers
+            menuCategories.forEach(cat => {
+                const catName = cat.dataset.category;
+                const hasVisibleItems = currentFilter === 'all' || 
+                    catName === currentFilter ||
+                    Array.from(cat.querySelectorAll('.menu-item-wrapper')).some(item => 
+                        !item.classList.contains('hidden')
+                    );
+                
+                cat.style.display = hasVisibleItems ? '' : 'none';
+            });
+            
+            // Show no results message
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+    })();
+    </script>
+</body>
+</html>

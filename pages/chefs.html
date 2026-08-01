@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the world-class culinary masters behind Savoir's Michelin-starred cuisine.">
+    <meta name="keywords" content="savoir chefs, executive chef, pastry chef, michelin star chefs, culinary team">
+    <meta name="author" content="Savoir Restaurant">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <title>Our Chefs | Savoir Restaurant</title>
+    
+    <link rel="icon" type="image/png" href="../Images/logo/favicon 1.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/variables.css">
+    <link rel="stylesheet" href="../CSS/utilities.css">
+    <link rel="stylesheet" href="../CSS/animations.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-text">SAVOIR</span>
+            </div>
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-subtitle">Preparing your experience...</p>
+        </div>
+    </div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                 <img src="../Images/logo/logo 1.png" alt="Savoir Restaurant" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="chefs.html">Chefs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservation.html">Reservation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="reservation.html" class="btn btn-reserve">Reserve Table</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('../Images/backgrounds/chef-header.png');">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="page-subtitle reveal-up">The Artists</span>
+                    <h1 class="page-title reveal-up delay-1">Meet Our Chefs</h1>
+                    <div class="page-breadcrumb reveal-up delay-2">
+                        <a href="../index.html">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Chefs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Executive Chef -->
+    <section class="section chef-featured-section" id="executive-chef">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <div class="chef-featured-image reveal-left">
+                        <img src="../Images/chefs/chef 1.png" alt="Chef Marco Rossi" loading="lazy">
+                        <div class="chef-featured-badge">
+                            <span>Executive Chef</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="chef-featured-content reveal-right">
+                        <span class="section-subtitle">Founder & Visionary</span>
+                        <h2 class="section-title">Marco Rossi</h2>
+                        <div class="section-divider divider-left"></div>
+                        <p class="chef-bio-text">
+                            With over 25 years of culinary excellence, Chef Marco Rossi has shaped Savoir into 
+                            one of the world's most celebrated dining destinations. Trained in the kitchens of 
+                            Italy and France, he brings a unique perspective that bridges traditional European 
+                            techniques with modern innovation.
+                        </p>
+                        <p class="chef-bio-text">
+                            Under his leadership, Savoir has earned two Michelin stars and a place among the 
+                            World's 50 Best Restaurants. His philosophy is simple: respect the ingredient, 
+                            master the technique, and create with passion.
+                        </p>
+                        
+                        <div class="chef-specialties">
+                            <h5>Specialties</h5>
+                            <div class="specialty-tags">
+                                <span class="specialty-tag">Italian Cuisine</span>
+                                <span class="specialty-tag">Molecular Gastronomy</span>
+                                <span class="specialty-tag">Wine Pairing</span>
+                                <span class="specialty-tag">Farm-to-Table</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chef-awards-mini">
+                            <div class="award-mini-item">
+                                <i class="fas fa-star"></i>
+                                <span>2 Michelin Stars</span>
+                            </div>
+                            <div class="award-mini-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>James Beard Award</span>
+                            </div>
+                            <div class="award-mini-item">
+                                <i class="fas fa-globe"></i>
+                                <span>World's 50 Best</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chef-social-large">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chef Team Grid -->
+    <section class="section chefs-grid-section" id="chef-team">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="section-subtitle reveal-up">The Team</span>
+                    <h2 class="section-title reveal-up delay-1">Culinary Masters</h2>
+                    <div class="section-divider reveal-up delay-2"></div>
+                    <p class="section-description reveal-up delay-2">
+                        Our talented team of chefs brings diverse expertise and creativity to every plate.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Chef 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-detail-card reveal-up">
+                        <div class="chef-detail-image">
+                            <img src="../Images/chefs/chef 2.png" alt="Elena Martinez" loading="lazy">
+                            <div class="chef-detail-overlay">
+                                <div class="chef-detail-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chef-detail-info">
+                            <span class="chef-role-badge">Pastry Chef</span>
+                            <h3 class="chef-detail-name">Elena Martinez</h3>
+                            <p class="chef-detail-bio">
+                                Award-winning pastry artist with a passion for modern French desserts. 
+                                Trained at Le Cordon Bleu Paris and former pastry chef at The French Laundry.
+                            </p>
+                            <div class="chef-detail-specialties">
+                                <span>French Pastry</span>
+                                <span>Chocolate Art</span>
+                                <span>Plated Desserts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-detail-card reveal-up delay-1">
+                        <div class="chef-detail-image">
+                            <img src="../Images/chefs/chef 3.png" alt="Kenji Tanaka" loading="lazy">
+                            <div class="chef-detail-overlay">
+                                <div class="chef-detail-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chef-detail-info">
+                            <span class="chef-role-badge">Sous Chef</span>
+                            <h3 class="chef-detail-name">Kenji Tanaka</h3>
+                            <p class="chef-detail-bio">
+                                Fusion cuisine expert blending Japanese precision with European flavors. 
+                                Former head chef at Nobu London with expertise in sushi and izakaya cuisine.
+                            </p>
+                            <div class="chef-detail-specialties">
+                                <span>Japanese Fusion</span>
+                                <span>Sushi Mastery</span>
+                                <span>Umami Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-detail-card reveal-up delay-2">
+                        <div class="chef-detail-image">
+                            <img src="../Images/chefs/chef 4.png" alt="Sophie Laurent" loading="lazy">
+                            <div class="chef-detail-overlay">
+                                <div class="chef-detail-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chef-detail-info">
+                            <span class="chef-role-badge">Saucier</span>
+                            <h3 class="chef-detail-name">Sophie Laurent</h3>
+                            <p class="chef-detail-bio">
+                                Master of sauces and classical French technique. Her sauces have been described 
+                                as "liquid gold" by food critics worldwide.
+                            </p>
+                            <div class="chef-detail-specialties">
+                                <span>French Sauces</span>
+                                <span>Classical Technique</span>
+                                <span>Seasonal Menus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-detail-card reveal-up">
+                        <div class="chef-detail-image">
+                            <img src="../Images/chefs/chef 5.png" alt="David Chen" loading="lazy">
+                            <div class="chef-detail-overlay">
+                                <div class="chef-detail-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chef-detail-info">
+                            <span class="chef-role-badge">Garde Manger</span>
+                            <h3 class="chef-detail-name">David Chen</h3>
+                            <p class="chef-detail-bio">
+                                Cold kitchen specialist with an artistic eye for presentation. Creates stunning 
+                                charcuterie boards and appetizer compositions.
+                            </p>
+                            <div class="chef-detail-specialties">
+                                <span>Charcuterie</span>
+                                <span>Food Styling</span>
+                                <span>Cold Appetizers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chef 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="chef-detail-card reveal-up delay-1">
+                        <div class="chef-detail-image">
+                            <img src="../Images/chefs/chef 6.png" alt="Maria Santos" loading="lazy">
+                            <div class="chef-detail-overlay">
+                                <div class="chef-detail-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chef-detail-info">
+                            <span class="chef-role-badge">Poissonnier</span>
+                            <h3 class="chef-detail-name">Maria Santos</h3>
+                            <p class="chef-detail-bio">
+                                Seafood expert with deep knowledge of sustainable fishing practices. 
+                                Brings the freshest ocean flavors to every dish.
+                            </p>
+                            <div class="chef-detail-specialties">
+                                <span>Seafood</span>
+                                <span>Sustainability</span>
+                                <span>Ceviche</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Join Our Team CTA -->
+    <section class="section team-cta-section" id="team-cta">
+        <div class="team-cta-bg" style="background-image: url('../Images/backgrounds/team-bg.png');"></div>
+        <div class="team-cta-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="team-cta-content reveal-up">
+                        <h2 class="team-cta-title">Join Our Culinary Family</h2>
+                        <p class="team-cta-desc">
+                            We're always looking for passionate talent to join our team. 
+                            If you share our commitment to excellence, we'd love to hear from you.
+                        </p>
+                        <a href="contact.html" class="btn btn-primary-glow btn-lg">
+                            <span>Career Opportunities</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <a href="../index.html" class="footer-brand">
+                                <span class="brand-text">SAVOIR</span>
+                                <span class="brand-dot">.</span>
+                            </a>
+                            <p class="footer-about">
+                                Savoir is a Michelin-starred fine dining restaurant dedicated to creating 
+                                extraordinary culinary experiences.
+                            </p>
+                            <div class="footer-social">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="../index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="menu.html">Our Menu</a></li>
+                                <li><a href="chefs.html">Our Chefs</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Services</h4>
+                            <ul class="footer-links">
+                                <li><a href="reservation.html">Reservations</a></li>
+                                <li><a href="#">Private Dining</a></li>
+                                <li><a href="#">Catering</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Us</h4>
+                            <ul class="footer-contact">
+                                <li><i class="fas fa-map-marker-alt"></i><span>123 Gourmet Avenue, Culinary District<br>New York, NY 10001</span></li>
+                                <li><i class="fas fa-phone"></i><span>+1 (212) 555-7890</span></li>
+                                <li><i class="fas fa-envelope"></i><span>reservations@savoir.com</span></li>
+                                <li><i class="fas fa-clock"></i><span>Mon - Sun: 5:00 PM - 11:00 PM</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">&copy; <span id="currentYear">2024</span> Savoir Restaurant. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-legal">
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/validation.js"></script>
+</body>
+</html>
