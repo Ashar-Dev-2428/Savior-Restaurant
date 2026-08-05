@@ -62,8 +62,9 @@ const AnimationModule = (() => {
 
         state.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
+                const element = entry.target;
                 if (entry.isIntersecting) {
-                    const element = entry.target;
+                    
                     
                     // Add active class
                     element.classList.add('active');
