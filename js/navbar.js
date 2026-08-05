@@ -152,13 +152,16 @@ const NavbarModule = (() => {
     // MOBILE MENU
     // ==========================================
 
-    const handleToggle = () => {
-        if (state.isMobileOpen) {
-            closeMobileMenu();
-        } else {
-            openMobileMenu();
-        }
-    };
+const handleToggle = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (state.isMobileOpen) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+};
 
     const openMobileMenu = () => {
         if (!navbarCollapse) return;
